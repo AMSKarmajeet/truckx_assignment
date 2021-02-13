@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import Dashboard from './components/Dashboard/Dashboard';
+import Preferences from './components/Preferences/Preferences'
 
-function App() {
+import "./styles.css";
+
+export default function App() {
+  const [users, setUsers] = React.useState([]);
+  const f = async () => {
+    const res = await fetch("https://reqres.in/api/users/");
+    const json = await res.json();
+    setUsers(json.data);
+  };
+
+  React.useEffect(() => {
+    f();
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>My Customers</h1>
+      <div className="flex">
+        {users.length &&
+          users.map((user) => {
+            return (
+              <div key={user.id}>
+                <p>
+                  <strong>{user.first_name}</strong>
+                </p>
+                <p>{user.email}</p>
+                <img key={user.avatar} src={user.avatar} />
+              </div>
+            );
+          })}
+      </div>
     </div>
   );
 }
-
-export default App;
