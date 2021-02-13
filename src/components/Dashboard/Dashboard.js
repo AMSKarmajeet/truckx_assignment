@@ -5,47 +5,6 @@ import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 
-const columnDefs = [
-  {headerName: "#", field: "id"},
-  {headerName: "Email", field: "email"},
-  {headerName: "First", field: "first_name"},
-  {headerName: "Last", field: "last_name"},
-  {
-    headerName:'Operations',
-    cellRenderer: 'btnCellRenderer',
-    cellRendererParams: {
-      editHandler: function(field) {
-        alert(`${field} was edited`);
-      },
-      deleteHandler: function(field) {
-        alert(`${field} was deleted`);
-      },
-    }
-  },
-]
-
-class BtnCellRenderer extends Component {
-  constructor(props) {
-    super(props);
-    this.editHandler = this.editHandler.bind(this);
-    this.deleteHandler = this.deleteHandler.bind(this);
-  }
-  editHandler() {
-   this.props.editHandler(this.props.value);
-  }
-  deleteHandler() {
-    this.props.deleteHandler(this.props.value);
-  }
-  render() {
-    return (
-      <div>
-        <button onClick={this.editHandler}>Edit</button>
-        <button onClick={this.deleteHandler}>Delete</button>
-      </div>
-    )
-  }
-}
-
 function Dashboard() {
   const [users, setUsers] = useState([]);
   const [filterText, setFilterText] = useState('');
@@ -99,6 +58,47 @@ function Dashboard() {
 			</div>
     </div>
   );
+}
+
+const columnDefs = [
+  {headerName: "#", field: "id"},
+  {headerName: "Email", field: "email"},
+  {headerName: "First", field: "first_name"},
+  {headerName: "Last", field: "last_name"},
+  {
+    headerName:'Operations',
+    cellRenderer: 'btnCellRenderer',
+    cellRendererParams: {
+      editHandler: function(field) {
+        alert(`${field} was edited`);
+      },
+      deleteHandler: function(field) {
+        alert(`${field} was deleted`);
+      },
+    }
+  },
+]
+
+class BtnCellRenderer extends Component {
+  constructor(props) {
+    super(props);
+    this.editHandler = this.editHandler.bind(this);
+    this.deleteHandler = this.deleteHandler.bind(this);
+  }
+  editHandler() {
+   this.props.editHandler(this.props.value);
+  }
+  deleteHandler() {
+    this.props.deleteHandler(this.props.value);
+  }
+  render() {
+    return (
+      <div>
+        <button onClick={this.editHandler}>Edit</button>
+        <button onClick={this.deleteHandler}>Delete</button>
+      </div>
+    )
+  }
 }
 
 export default Dashboard;
