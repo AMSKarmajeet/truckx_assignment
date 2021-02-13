@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Dashboard from '../Dashboard/Dashboard';
 import Login from '../Login/Login';
-import Preferences from '../Preferences/Preferences';
 import useToken from './useToken';
 
 function App() {
@@ -16,14 +15,17 @@ function App() {
 
   return (
     <div className="wrapper">
-      <h1>Application</h1>
+      <h1>My Customers</h1>
+      <h3>To view my list of customer go to:- <a href="http://localhost:3000/dashboard">http://localhost:3000/dashboard</a></h3>
+      <h3>Home:- <a href="http://localhost:3000">http://localhost:3000</a></h3>
+      <h3>Login:- <a href="http://localhost:3000/login">http://localhost:3000/login</a></h3>
       <BrowserRouter>
         <Switch>
           <Route path="/dashboard">
             <Dashboard />
           </Route>
-          <Route path="/preferences">
-            <Preferences />
+          <Route path="/login">
+            <Login />
           </Route>
         </Switch>
       </BrowserRouter>
