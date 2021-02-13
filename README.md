@@ -10,5 +10,5 @@ In this assignment, I have implemented methods to save tokens with **sessionStor
 Kailash Chandra Bhakta\
 School of Biomedical Engineering\
 IIT (BHU) Varanasi.\
-Personal Mail:- kcbhakta.99@gmail.com
-Institute Mail ID:- kchandra.bhakta.bme16@iitbhu.ac.in 
+Personal Mail:- kcbhakta.99@gmail.com\
+Institute Mail ID:- kchandra.bhakta.bme16@iitbhu.ac.in
