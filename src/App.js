@@ -1,6 +1,6 @@
 import * as React from "react";
 import Dashboard from './components/Dashboard/Dashboard';
-import Preferences from './components/Preferences/Preferences'
+// import Preferences from './components/Preferences/Preferences'
 
 import "./styles.css";
 
