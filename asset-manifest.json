@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/truckx_assignment/static/css/main.a40e6e6e.chunk.css",
+    "main.js": "/truckx_assignment/static/js/main.fb7f917a.chunk.js",
+    "main.js.map": "/truckx_assignment/static/js/main.fb7f917a.chunk.js.map",
+    "runtime-main.js": "/truckx_assignment/static/js/runtime-main.9fb7a170.js",
+    "runtime-main.js.map": "/truckx_assignment/static/js/runtime-main.9fb7a170.js.map",
+    "static/css/2.8d0a81fb.chunk.css": "/truckx_assignment/static/css/2.8d0a81fb.chunk.css",
+    "static/js/2.7b85b240.chunk.js": "/truckx_assignment/static/js/2.7b85b240.chunk.js",
+    "static/js/2.7b85b240.chunk.js.map": "/truckx_assignment/static/js/2.7b85b240.chunk.js.map",
+    "index.html": "/truckx_assignment/index.html",
+    "static/css/2.8d0a81fb.chunk.css.map": "/truckx_assignment/static/css/2.8d0a81fb.chunk.css.map",
+    "static/css/main.a40e6e6e.chunk.css.map": "/truckx_assignment/static/css/main.a40e6e6e.chunk.css.map",
+    "static/js/2.7b85b240.chunk.js.LICENSE.txt": "/truckx_assignment/static/js/2.7b85b240.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9fb7a170.js",
+    "static/css/2.8d0a81fb.chunk.css",
+    "static/js/2.7b85b240.chunk.js",
+    "static/css/main.a40e6e6e.chunk.css",
+    "static/js/main.fb7f917a.chunk.js"
+  ]
+}
